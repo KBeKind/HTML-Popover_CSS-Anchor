@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      [popover] {
+        inset: unset;
+        bottom: anchor(top);
+        left: anchor(right);
+      }
+      body {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="label-container">
+        <label for="aField">A Field</label>
+        <button
+          popovertarget="info"
+          id="button"
+          type="button"
+          class="information"
+        >
+          i
+        </button>
+        <div popover="manual" anchor="button" id="info">
+          Extra information to help
+        </div>
+      </div>
+      <input type="text" id="aField" />
+    </form>
+  </body>
+</html>
